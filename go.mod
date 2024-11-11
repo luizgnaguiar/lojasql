@@ -1,4 +1,4 @@
-module github/luizgnaguiar/loja
+module github/luizgnaguiar/lojasql
 
 go 1.23.2
 

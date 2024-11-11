@@ -1,13 +1,15 @@
 package models
 
+import "github/luizgnaguiar/lojasql/db"
+
 type Produto struct {
 	Nome, Descricao string
 	Preco           float64
 	Quantidade, id  int
 }
 
-func BustcarTodosOsProdutos() []Produto {
-	db := ConectarComBancoDeDados()
+func BuscarTodosOsProdutos() []Produto {
+	db := db.ConectarComBancoDeDados()
 	selectDeTodosProdutos, err := db.Query("select * from produtos")
 	if err != nil {
 		panic(err.Error())
